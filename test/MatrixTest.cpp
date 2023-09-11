@@ -1,32 +1,10 @@
 ﻿#include "pch.h"
 #include "Matrix.h"
+#include "MatrixUtils.h"
 #include <vector>
 
 using namespace m3d;
-
-template<size_t R, size_t C, class T>
-Matrix<R, C, T> create_matrix(const std::vector<T>& values) {
-    Matrix<R, C, T> result;
-    auto src = values.begin();
-    size_t n = std::min(result.size(), values.size());
-    T* dst = result.data();
-    for (size_t offset = 0; offset < n; ++offset, ++dst, ++src) {
-        *dst = *src;
-    }
-    return result;
-}
-
-Matrix2d create_matrix_2d(const std::vector<double>& values) {
-    return create_matrix<2, 2, double>(values);
-}
-
-Matrix3d create_matrix_3d(const std::vector<double>& values) {
-    return create_matrix<3, 3, double>(values);
-}
-
-Matrix4d create_matrix_4d(const std::vector<double>& values) {
-    return create_matrix<4, 4, double>(values);
-}
+using namespace m3d::utils;
 
 TEST(Matrix, EqualOperator) {
     Matrix2d a = create_matrix_2d({ 1, 2, 3, 4 });

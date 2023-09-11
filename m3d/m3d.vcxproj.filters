@@ -8,6 +8,7 @@
     <ClInclude Include="Vector2d.h" />
     <ClInclude Include="Value.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MatrixUtils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="m3d.cpp" />
@@ -15,5 +16,6 @@
     <ClCompile Include="Vector3d.cpp" />
     <ClCompile Include="Vector2d.cpp" />
     <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="MatrixUtils.cpp" />
   </ItemGroup>
 </Project>

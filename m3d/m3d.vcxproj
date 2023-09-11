@@ -148,6 +148,7 @@
     <ClInclude Include="constants.h" />
     <ClInclude Include="m3d.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MatrixUtils.h" />
     <ClInclude Include="utils.h" />
     <ClInclude Include="Value.h" />
     <ClInclude Include="Vector2d.h" />
@@ -156,6 +157,7 @@
   <ItemGroup>
     <ClCompile Include="m3d.cpp" />
     <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="MatrixUtils.cpp" />
     <ClCompile Include="utils.cpp" />
     <ClCompile Include="Vector2d.cpp" />
     <ClCompile Include="Vector3d.cpp" />
