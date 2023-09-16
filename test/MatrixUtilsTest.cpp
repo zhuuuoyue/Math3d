@@ -1,5 +1,7 @@
 ﻿#include "pch.h"
+
 #include "MatrixUtils.h"
+#include "constants.h"
 
 using namespace m3d;
 using namespace m3d::utils;
@@ -71,5 +73,13 @@ TEST(MatrixUtils, Transform3d) {
     Matrix3d matrix = create_matrix_3d({ 1, 0, 0, 0, 0, 1, 0, -1, 0 });
     Vector3d result = transform(point, matrix);
     Vector3d expect{ 1, -1, 1 };
+    EXPECT_EQ(result, expect);
+}
+
+TEST(MatrixUtils, CreateRotationMatrix2d) {
+    Vector2d point{ 1, 1 };
+    Matrix2d matrix = create_rotation_matrix_2d(constants::PI_2);
+    Vector2d result = transform(point, matrix);
+    Vector2d expect{ -1, 1 };
     EXPECT_EQ(result, expect);
 }

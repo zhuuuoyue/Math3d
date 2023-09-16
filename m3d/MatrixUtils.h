@@ -143,5 +143,12 @@ namespace m3d {
         /// <param name="mat">变换矩阵</param>
         /// <returns>变换后的点</returns>
         M3D_API Vector3d transform(const Vector3d& src, const Matrix3d& mat);
+
+        /// <summary>
+        /// 生成二维旋转矩阵
+        /// </summary>
+        /// <param name="rad">旋转角度（弧度表示）</param>
+        /// <returns>旋转矩阵</returns>
+        M3D_API Matrix2d create_rotation_matrix_2d(double rad);
     }
 }
